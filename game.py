@@ -69,10 +69,6 @@ class GameBoard(ticTacToeB, Node):
         return GameBoard(tuple, victorious, turn, isLeaf)
         
     def toString(board):
-        rows = [
-            [toChar(board.tuple[3 * a + b]) for a in range(3)] for b in range(3)
-        ]
-        
         value = "\n\n"
         value += toChar(board.tuple[0]) + "  | " + toChar(board.tuple[1]) + " | " + toChar(board.tuple[2])
         value += "\n-----------\n"
